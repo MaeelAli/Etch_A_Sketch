@@ -1,5 +1,5 @@
 $(document).ready(function() {
-var tile = $('<div class="tile"></div>);
+var tile = $('<div class="tile"></div>');
 for (var i = 0; i < 16; i++)
   {
     $('#wrapper').append(tile);
