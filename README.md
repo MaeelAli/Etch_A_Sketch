@@ -25,4 +25,5 @@ This is the repository for the Project: Javascript/jQuery of the Odin Project co
   See how many grid squares you can get before it becomes unusably slow.
   
 # 4.  (Optional): Instead of just changing the color of your grid from black to white (for example), have each pass through it with the mouse change to a completely random RGB value. Then try having each pass just add another 10% of black to it, so only after 10 passes is the square completely black.
-# 6. Push your project to Github
+
+# 5. Push your project to Github
