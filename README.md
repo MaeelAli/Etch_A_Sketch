@@ -1,6 +1,8 @@
 # Etch_A_Sketch
 This is the repository for the Project: Javascript/jQuery of the Odin Project course where we will create an Etch-A-Sketch
 
+You can preview this project here: https://htmlpreview.github.io/?https://github.com/MaeelAli/Etch_A_Sketch/blob/master/index.html
+
 ## 1. Create a web page (or use JSFiddle) with a 16x16 grid of square divs.
   Create your divs using Javascript/jQuery... don't try making them by hand with copy-pasting!
   
