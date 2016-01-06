@@ -6,12 +6,13 @@
 
 .tile-container {
 	margin: 0 auto;
+	background-color: #ccffff;
 }
 
 .tile {
-	background-color: black;
-	border-color: white;
-	border-style: solid;
+	background-color: white;
+	border-color: black;
+	border-style: dotted;
 	border-width: 1px;
 	display: inline-block;
 }

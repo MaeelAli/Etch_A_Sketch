@@ -5,7 +5,22 @@
 
 $(document).ready(function() {
 
+  //displays initial 16x16 grid
   displayGrid(width, height);
+
+  //draws as you mouse over (like a pen)
+  defaultSketchBehaviour();
+
+
+  //hover code to change color to black when mouse leave
+  /*
+  $('.tile-container').on('mouseleave','.tile', function() {
+    var tile = $(this).closest('.tile');
+    tile.css('background-color', 'black');
+    //tile.fadeIn();
+    console.log('i am out a tile now!');
+  }); 
+  */
 
 });
 
@@ -26,4 +41,11 @@ function displayGrid(width, height) {
   $('.tile').css('width', pixels / width - 2);
   $('.tile').css('height', pixels / height - 2);
 
+}
+
+function defaultSketchBehaviour() {
+  $('.tile-container').on('mouseenter','.tile', function() {
+    var tile = $(this).closest('.tile');
+    tile.css('background-color', 'red');
+  }); 
 }
