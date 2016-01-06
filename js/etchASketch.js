@@ -1,13 +1,29 @@
+//hardcoded for now
+  var width = 16;
+  var height = 16;
+  var pixels = 960;
+
 $(document).ready(function() {
-var tile = $('<div class="tile"></div>');
-for (var i = 0; i < 16; i++)
+
+  displayGrid(width, height);
+
+});
+
+function displayGrid(width, height) {
+
+  for (var i = 0; i < height; i++)
   {
-    $('#wrapper').append(tile);
+    for (var j = 0; j < width; j++)
+    {
+      //var tile = $('<div class="tile" id="' + j + '"></div>');
+      var tile = $('<div class="tile"></div>');
+      $('.tile-container').append(tile);
+    }
+    var tileRow = $('<div class="tileRow" id="' + i + '"></div>');
+    $('.tile-container').append(tileRow);
   }
   
-  $('.tile').css('border-color', '1px solid #967');
-  $('.tile').css('width', '25px');
-  $('.tile').css('height', '25px');
-  $('.tile').css('display', 'inline-block');
-  
-});
+  $('.tile').css('width', pixels / width - 2);
+  $('.tile').css('height', pixels / height - 2);
+
+}

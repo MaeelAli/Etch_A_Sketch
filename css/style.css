@@ -1,0 +1,22 @@
+.top-container {
+	background-color: white;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.tile-container {
+	margin: 0 auto;
+}
+
+.tile {
+	background-color: black;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	display: inline-block;
+}
+
+.tileRow {
+	clear: both;
+	display: block;
+}
