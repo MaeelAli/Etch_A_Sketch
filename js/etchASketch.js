@@ -5,24 +5,18 @@
 
 $(document).ready(function() {
 
-  //displays initial 16x16 grid
+  initGrid(); 
+
+});
+
+function initGrid() {
+
+   //displays initial 16x16 grid
   displayGrid(width, height);
 
   //draws as you mouse over (like a pen)
   defaultSketchBehaviour();
-
-
-  //hover code to change color to black when mouse leave
-  /*
-  $('.tile-container').on('mouseleave','.tile', function() {
-    var tile = $(this).closest('.tile');
-    tile.css('background-color', 'black');
-    //tile.fadeIn();
-    console.log('i am out a tile now!');
-  }); 
-  */
-
-});
+}
 
 function displayGrid(width, height) {
 
@@ -44,8 +38,30 @@ function displayGrid(width, height) {
 }
 
 function defaultSketchBehaviour() {
+
   $('.tile-container').on('mouseenter','.tile', function() {
     var tile = $(this).closest('.tile');
+    tile.css('background-color', 'white');
+    tile.css('opacity', '1');
+  });
+
+ $('.tile-container').on('mouseleave','.tile', function() {
+    //reset mouseleave event
+    var tile = $(this).closest('.tile');
+    tile.css('background-color', 'white');
+  }); 
+
+}
+
+function fadeBehaviour(){
+ $('.tile-container').on('mouseenter','.tile', function() {
+    var tile = $(this).closest('.tile');
+    tile.css('opacity', '0');
+  }); 
+
+  $('.tile-container').on('mouseleave','.tile', function() {
+    var tile = $(this).closest('.tile');
     tile.css('background-color', 'red');
+    tile.fadeTo("slow", 1);
   }); 
 }
