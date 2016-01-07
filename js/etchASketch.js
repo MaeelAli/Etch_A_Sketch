@@ -15,7 +15,7 @@ function initGrid() {
   displayGrid(dimension);
 
   //draws as you mouse over (like a pen)
-  defaultSketchBehaviour();
+  drawBehaviour();
 }
 
 function displayGrid(dimension) {
@@ -37,23 +37,19 @@ function displayGrid(dimension) {
 
 }
 
-function defaultSketchBehaviour() {
-
+function drawBehaviour() {
+  $('.tile-container').off();
   $('.tile-container').on('mouseenter','.tile', function() {
     var tile = $(this).closest('.tile');
-    tile.css('background-color', 'white');
-    tile.css('opacity', '1');
+    tile.css('opacity', '0');
   });
-
- $('.tile-container').on('mouseleave','.tile', function() {
-    //reset mouseleave event
-    var tile = $(this).closest('.tile');
-    tile.css('background-color', 'white');
-  }); 
 
 }
 
-function fadeBehaviour(){
+function trailBehaviour(){
+
+ $('.tile-container').off();
+
  $('.tile-container').on('mouseenter','.tile', function() {
     var tile = $(this).closest('.tile');
     tile.css('opacity', '0');
@@ -61,9 +57,16 @@ function fadeBehaviour(){
 
   $('.tile-container').on('mouseleave','.tile', function() {
     var tile = $(this).closest('.tile');
-    tile.css('background-color', 'red');
     tile.fadeTo("slow", 1);
   }); 
+}
+
+function fadeBehaviour(){
+ $('.tile-container').off();
+ $('.tile-container').on('mouseenter','.tile', function() {
+    var tile = $(this).closest('.tile');
+    tile.fadeTo("fast", tile.css('opacity') - 0.1);
+  });
 }
 
 function clearGrid(){
